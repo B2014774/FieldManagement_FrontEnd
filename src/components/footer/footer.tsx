@@ -134,7 +134,7 @@ export default function Footer() {
                       href="/"
                       className="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600"
                     >
-                      FAQ's
+                      FAQ
                     </a>
                   </li>
                   <li className="mb-2 leading-6">
