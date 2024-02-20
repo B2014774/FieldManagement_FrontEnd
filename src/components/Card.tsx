@@ -1,6 +1,23 @@
 import React from "react";
 import Image from "next/image";
-export default function Card() {
+
+//Định nghĩa biến Object để gọi (Không thì khi gọi object sẽ bị báo lỗi )
+interface FieldData {
+  _id: string;
+  fieldName: string;
+  fieldAddress: string;
+  rating: number;
+  sports: string[];
+}
+
+//ĐỊnh nghĩa cấu trúc biến props
+interface childProps {
+  field?: FieldData;
+}
+
+//Truyefnef
+
+const Card = (props: childProps) => {
   return (
     <>
       {/*<!-- Component: E-commerce card --> */}
@@ -17,7 +34,7 @@ export default function Card() {
         <div className="p-6">
           <header className="mb-4">
             <h3 className="text-xl font-medium text-slate-700">
-              Greek breakfast
+              {props.field?.fieldName}
             </h3>
             <p className=" text-slate-400"> $8.99</p>
           </header>
@@ -83,4 +100,6 @@ export default function Card() {
       {/*<!-- End E-commerce card --> */}
     </>
   );
-}
+};
+
+export default Card;
