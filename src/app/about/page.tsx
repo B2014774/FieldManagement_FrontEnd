@@ -1,8 +1,17 @@
 import React from "react";
+import Link from "next/link";
 
 export default function CardBasic() {
   return (
     <>
+      <Link
+        href={{
+          pathname: "/",
+          query: { params1: "value1", params2: "value2" },
+        }}
+      >
+        Click here to Back!
+      </Link>
       {/*<!-- Component: Basic card --> */}
       <div className="overflow-hidden rounded bg-white text-slate-500 shadow-md shadow-slate-200">
         <div className="p-6">
